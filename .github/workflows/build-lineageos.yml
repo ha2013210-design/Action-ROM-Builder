@@ -95,6 +95,12 @@ jobs:
         git clone ${{ github.event.inputs.DEVICE_TREE_URL }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
 
+    - name: Clone vendor and kernel trees
+      run: |
+          cd ${{ steps.pwd.outputs.workspace-folder }}/lineage
+          git clone https://github.com/kaminarich/android_vendor_infinix_X6873 -b lineage-24.0 vendor/infinix/X6873
+          git clone https://github.com/kaminarich/android_kernel_infinix_X6873 -b lineage-24.0 device/infinix/X6873-kernel
+
     - name: Clone common tree
       if: |
         github.event.inputs.COMMON_TREE_URL != null
