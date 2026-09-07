@@ -7,23 +7,23 @@ on:
       SYNC_URL:
         description: 'SYNC_URL'
         required: true
-        default: 'https://github.com/LineageOS/android.git'
+        default: 'https://github.com/kaminarich/android_manifest_infinix_X6873.git'
       MANIFEST_BRANCH:
         description: 'MANIFEST_BRANCH'
         required: true
-        default: 'lineage-21.0'
+        default: 'lineage-24.0'
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/1ndev-ui/ROM_CG65_device_tree.git'
+        default: 'https://github.com/kaminarich/android_device_infinix_X6873.git'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: 'lineage-21.0'
+        default: 'lineage-24.0'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/vortex/CG65'
+        default: 'device/infinix/X6873'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
@@ -33,11 +33,11 @@ on:
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'CG65'
+        default: 'X6873'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'lineage_CG65'
+        default: 'lineage_X6873'
 
 jobs:
   build-lineageos:
